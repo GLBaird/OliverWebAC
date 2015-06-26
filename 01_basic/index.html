@@ -2,21 +2,222 @@
 <html lang="en">
 	<head>
 		<title>Welcome to HTML 5</title>
-        
+
         <meta charset="UTF-8">
         <meta name="author" content="Leon Baird">
         <meta name="keywords" content="training, html, css, javascript">
         <meta name="description" content="Demo of responsive page of content">
-        
+        <meta name="viewport" content="initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="lib/html5shiv.min.js"></script>
+        <![endif]-->
+
         <!-- Load external files -->
         <link rel="stylesheet" href="css/styles.css">
-        <script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
-        
-        
-        
-        
-        
-	</body>
+
+        <header>
+            <h1>Welcome to HTML 5</h1>
+            <p>Basic page layout</p>
+        </header>
+
+        <nav id="navBar">
+            <button id="menuToggle">Toggle menu</button>
+            <ul>
+                <li><a id="home" href="#">Home</a></li>
+                <li><a id="about" href="#">About</a></li>
+                <li><a id="products" href="#">Products</a></li>
+                <li><a id="contact" href="#">Contact us</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <article>
+                <h2>Welcome to my lovely article</h2>
+
+                <p>This is our amazing HTML article. I hope you enjoy reading it. I didn't.</p>
+
+                <h3>Section 1 - Basic stuff</h3>
+
+                <p>Here are some simple things that we can look at:</p>
+
+                <ol>
+                    <li>Wake up</li>
+                    <li>Have breakfast</li>
+                    <li>Have lunch</li>
+                    <li>Have dinner</li>
+                    <li>Sleep</li>
+                </ol>
+
+                <p>Please visit the
+                    <a href="http://www.bbc.co.uk"
+                       target="_blank"
+                       title="Visit the homepage of the BBC">BBC Website</a>
+                    or this page will explode.
+                </p>
+
+                <h3>Multimedia</h3>
+
+                <p>Here is a lovely picture!</p>
+
+                <figure>
+                    <img src="images/flightdeck.jpg" alt="Flight deck computer render">
+                    <figcaption>The Liberator flight desck, Blake's 7 1978</figcaption>
+                </figure>
+
+                <p>And here is some video:</p>
+
+                <figure>
+                    <video src="media/render.mp4" poster="images/poster.png" controls>
+                        <strong>WARNING!</strong><br>
+                        Your browser is too old for HTML5 video.
+                    </video>
+                    <figcaption>3D Rendering example</figcaption>
+                </figure>
+
+                <h3>The boring stuff</h3>
+
+                <p>Tables and things</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>QTY</th>
+                            <th>Name of product</th>
+                            <th>Cost</th>
+                            <th>In stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100</td>
+                            <td>Inflatable tomatoes</td>
+                            <td>30.00</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>Damp lettuce</td>
+                            <td>10.0</td>
+                            <td>YES</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Wobbly fans</td>
+                            <td>20.00</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>Metal cardis</td>
+                            <td>10.0</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td colspan="2">Stuff</td>
+                            <td>NO</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </article>
+
+            <aside>
+                <h2>News and events</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa
+                    <strong>strong</strong>. Cum sociis natoque penatibus
+                    et magnis dis parturient montes, nascetur ridiculus
+                    mus. Donec quam felis, ultricies nec, pellentesque
+                    eu, pretium quis, sem. Nulla consequat massa quis
+                    enim. Donec pede justo, fringilla vel, aliquet nec,
+                    vulputate eget, arcu. In enim justo, rhoncus ut,
+                    imperdiet a, venenatis vitae, justo. Nullam dictum
+                    felis eu pede <a class="external ext" href="#">link</a>
+                    mollis pretium. Integer tincidunt. Cras dapibus.
+                    Vivamus elementum semper nisi. Aenean vulputate
+                    eleifend tellus. Aenean leo ligula, porttitor eu,
+                    consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+                    dapibus in, viverra quis, feugiat a, tellus. Phasellus
+                    viverra nulla ut metus varius laoreet. Quisque rutrum.
+                    Aenean imperdiet. Etiam ultricies nisi vel augue.
+                    Curabitur ullamcorper ultricies nisi.</p>
+
+
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean
+                        massa.</li>
+                    <li>Cum sociis natoque penatibus et magnis dis
+                        parturient montes, nascetur ridiculus mus. Donec quam
+                        felis, ultricies nec, pellentesque eu, pretium quis,
+                        sem.</li>
+                    <li>Nulla consequat massa quis enim. Donec pede justo,
+                        fringilla vel, aliquet nec, vulputate eget, arcu.</li>
+                    <li>In enim justo, rhoncus ut, imperdiet a, venenatis
+                        vitae, justo. Nullam dictum felis eu pede mollis
+                        pretium. Integer tincidunt.</li>
+                </ul>
+
+
+                <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetuer.</li>
+                    <li>Aenean commodo ligula eget dolor.</li>
+                    <li>Aenean massa cum sociis natoque penatibus.</li>
+                </ul>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec quam felis,
+                    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+            </aside>
+
+        </main>
+
+        <footer>
+            <h2>Welcome to the bottom of the page</h2>
+            <p>© Copyright Leon Baird, 2015</p>
+        </footer>
+
+        <script type="text/javascript" src="js/script.js"></script>
+
+    </body>
 </html>

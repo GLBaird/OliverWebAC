@@ -1,5 +1,270 @@
-.redBold {
-    color: red;
-    font-weight: bold;
-    background: yellow;
+/* Fix CSS for semantic markup in older browser */
+header, footer, nav, article, aside, figure, figcaption, main {
+    display: block;
 }
+
+body {
+    font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    color: #444;
+    font-size: larger;
+
+    margin: 0;
+    padding: 0;
+
+    min-width: 900px;
+
+    background: #d0dce5; /* Old browsers */
+    background: -moz-linear-gradient(top,  #d0dce5 0%, #80a4ba 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d0dce5), color-stop(100%,#80a4ba)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #d0dce5 0%,#80a4ba 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #d0dce5 0%,#80a4ba 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #d0dce5 0%,#80a4ba 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #d0dce5 0%,#80a4ba 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0dce5', endColorstr='#80a4ba',GradientType=0 ); /* IE6-9 */
+}
+
+header, footer {
+    background: #80a4ba;
+    padding: 1em 5%;
+}
+
+header {
+    box-shadow: 0 2px 4px #999;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0.3em 0;
+}
+
+header p {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 0.5em 0;
+}
+
+
+nav {
+    background: #888;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 4em 1em 0.5em 1em;
+    background-repeat: no-repeat;
+    background-size: 3em;
+    background-position: center 0.8em;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+nav a#home {
+    background-image: url("../images/Home-100.png");
+}
+
+nav a#about {
+    background-image: url("../images/About-100.png");
+}
+
+nav a#products {
+    background-image: url("../images/Product-100.png");
+}
+
+nav a#contact {
+    background-image: url("../images/Email-100.png");
+}
+
+nav a:hover {
+    color: transparent;
+    background-size: 4.3em;
+    background-position: center;
+}
+
+article {
+    float: right;
+    width: 56%;
+    margin-right: 5%;
+}
+
+aside {
+    float: left;
+    width: 28%;
+    margin-left: 5%;
+}
+
+footer {
+    clear: both;
+}
+
+figure {
+    margin: 1em 0;
+}
+
+figure img, figure video {
+    max-width: 100%;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 2px 2px 5px #555;
+    -moz-box-shadow: 2px 2px 5px #555;
+    box-shadow: 2px 2px 5px #555;
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 1em;
+}
+
+figcaption:before {
+    content: 'Figure: ';
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
+
+button#menuToggle {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 940px) {
+
+    body {
+        min-width: 0;
+    }
+    header {
+        font-size: 0.7em;
+    }
+    
+    nav {
+        font-size: 0.8em;
+    }
+
+    article, aside {
+        width: 42.5%;
+    }
+}
+
+@media screen and (max-width: 780px) and (orientation: portrait) {
+
+    article, aside {
+        float: none;
+        width: auto;
+        margin: 1em 5%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding-top: 5em;
+        font-size: 0.5em;
+    }
+
+    article, aside {
+        float: none;
+        width: auto;
+        margin: 1em 5%;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(150, 150, 150, 0.95);
+        -webkit-box-shadow: 0 4px 10px #777;
+        -moz-box-shadow: 0 4px 10px #777;
+        box-shadow: 0 4px 10px #777;
+        z-index: 10;
+        padding-top: 3em;
+        height: 0;
+        overflow: hidden;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    }
+
+    nav.show {
+        height: 17.5em;
+    }
+
+    button#menuToggle {
+        position: fixed;
+        font-size: 1em;
+        top: 0;
+        left: 1em;
+        height: 3em;
+        width: 3em;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: transparent;
+        cursor: pointer;
+        background-image: url("../images/Menu-50.png");
+        background-repeat: no-repeat;
+        background-size: 1.8em;
+        background-position: center;
+        display: inline;
+    }
+
+    nav:before {
+        content: 'menu';
+        position: fixed;
+        top: 0.4em;
+        left: 3em;
+        font-size: 1.5em;
+    }
+
+    nav li {
+        display: block;
+        margin: 0 5%;
+    }
+
+    nav a {
+        font-size: 1.5em;
+        padding: 0.8em 5% 0.8em 4em;
+        text-align: left;
+        background-size: 2em;
+        background-position: 1em center;
+    }
+
+    nav a:hover {
+        color: white;
+        background-size: 2em;
+        background-position: 1em center;
+    }
+
+}
+
+
+
+
+
+
+
+
+
