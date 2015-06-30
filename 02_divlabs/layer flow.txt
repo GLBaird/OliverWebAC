@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+    FIXED           LAYERD - Window - Note Document Flow    NO SCROLL
+    ------------------------------------------------------
+    ABSOLUTE        Layerd - Parent - Not Docuement Flow    SCROLL
+    ------------------------------------------------------
+    FLOAT           ALL on SAME LAYER Repel Document Flow   SCROLL
+    ______________________________________________________
+    RELATIVE        LAYERED         - Document FLOW         SCROLL
+    STATIC          Background      - Document FLOW         SCROLL

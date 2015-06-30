@@ -1,0 +1,37 @@
+
+var data = new Object();
+
+data.surname = "Baird";
+data.forename = "Leon";
+data.idiot = true;
+
+JSON (Javascript Object Notation)
+
+{} = Object
+[] = Array
+
+var data = {
+	surname: "Baird",
+	forename: "Leon",
+	idiot: true,
+	book: {
+		title: "How to eat pies",
+		cost: 200
+	}
+};
+
+arrays
+
+var numbers = [10, 20, 30, 40, 50, 60];
+
+Methods
+	length = Number of records
+	push   = Adds to end and return index
+	pop	  = Removes last record and returns it
+	splice = add or remove
+
+	splice(index, numToDel, ...newval)
+
+
+
+

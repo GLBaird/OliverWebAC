@@ -1,0 +1,63 @@
+<html>
+
+    <head>
+
+        <title>Javascript</title>
+
+        <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+        <script type="text/javascript">
+            /*
+            alert("HI from JS");
+
+            document.write("HI from JS");
+
+            window.onload = function() {
+                document.getElementById("clickMe").addEventListener("click", sayHello);
+            }
+
+            function sayHello(event) {
+                if (!event) {
+                    event = window.Event;
+                }
+                document.getElementById("result").innerHTML = "Hello <b>WORLD!</b>";
+                document.getElementById("result").style.border = "1px solid red";
+
+                var heading = document.createElement("h1");
+                heading.appendChild( document.createTextNode("Hi there, making a heading!") );
+
+                document.body.appendChild(heading);
+                console.log(event);
+                console.log(this.id);
+            }
+            */
+            $(document).ready(function() {
+                alert("HI");
+                $("#clickMe").click(sayHello);
+            });
+
+
+            function sayHello(event) {
+                $("#result")
+                        .html("Hello <b>World</b>")
+                        .css("border", "1px solid red")
+                        .css("background", "yellow");
+
+                $("body").append(
+                        $("<h1 />").html("Hi there, making a heading!")
+                );
+
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <h1>Welcome to JS</h1>
+
+        <p id="result"></p>
+        <button id="clickMe">Click Me</button>
+
+    </body>
+
+</html>

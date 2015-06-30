@@ -1,0 +1,53 @@
+
+Operators
+
+	=	assign
+
+Conditional Operators
+
+	==	Equality
+	!=	Inequality
+	<	Less than
+	>	Greater than
+	<=	Less than and equals
+	>=	Greater than and equals
+
+	!	NOT
+
+	===	Total Equality
+	!==	Total inequality
+
+Conjunctive Operators
+
+	&&	And
+	||	OR
+
+Mathematics
+
+	+	Addition (for string concatenate)
+	-	Subtraction
+	/	Divide
+	*	Multiply
+	%	Modulus
+
+	++	Add 1
+	--	Subtracts 1
+
+
+		val++	++val
+		val = val + 1
+
+	+=
+	-=	val += 5
+	*=	val = val + 5
+	/=
+	%=
+
+
+	10 + 3 * 2 = 
+
+	(10 + 3) * 2
+
+	5 * 2 + 80 / 6 * 5 - 40
+
+	

@@ -1,0 +1,17 @@
+
+window		Top Level - Browser Window
+
+navigator	Browser
+location	HREF of the browser
+
+document	DOM - all page content
+
+
+DomDocument = Xml File (HTML FILE)
+		used to create extra nodes
+
+DomNode	- All elements on the page
+
+DomElement  - all Elements - children
+
+DomNodeList - Array

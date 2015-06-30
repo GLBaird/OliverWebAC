@@ -1,0 +1,37 @@
+
+
+@-webkit-keyframes connectionPulse {
+    0% {
+        background: #777;
+    }
+    100% {
+        background: #ab4159;
+    }
+}
+
+@-moz-keyframes connectionPulse {
+    0% {
+        background: #777;
+    }
+    100% {
+        background: #ab4159;
+    }
+}
+
+@-o-keyframes connectionPulse {
+    0% {
+        background: #777;
+    }
+    100% {
+        background: #ab4159;
+    }
+}
+
+@keyframes connectionPulse {
+    0% {
+        background: #777;
+    }
+    100% {
+        background: #ab4159;
+    }
+}

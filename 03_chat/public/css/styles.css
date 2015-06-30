@@ -1,0 +1,184 @@
+@import "animations.css";
+
+body {
+    font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+    font-size: large;
+    font-weight: lighter;
+    color: #444;
+
+    background: #EFEFEF;
+    margin: 0;
+}
+
+header {
+    background: #b8b8b8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px #444;
+    z-index: 2;
+}
+
+header button {
+    position: absolute;
+    font-size: 1em;
+    top: 0.3em;
+    left: 1em;
+    bottom: 0.3em;
+    background: transparent;
+    border: none;
+    width: 2em;
+    color: transparent;
+    background-image: url("../images/Back-64.png");
+    background-position: center;
+    background-size: 2em;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+header button.show {
+    background-image: url("../images/Forward-64.png");
+}
+
+header h1 {
+    text-align: center;
+    font-weight: lighter;
+    margin: 0.3em 2em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+header span {
+    background: #777;
+    position: absolute;
+    top: 50%;
+    margin-top: -1em;
+    right: 1.5em;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    color: transparent;
+    border-radius:50%;
+    border: 2px solid #999;
+    box-sizing: border-box;
+    -webkit-animation: connectionPulse 1s infinite alternate;
+    -o-animation: connectionPulse 1s infinite alternate;
+    animation: connectionPulse 1s infinite alternate;
+}
+
+header span.connected {
+    background: #487751;
+    -webkit-animation: none;
+    -o-animation: none;
+    animation: none;
+}
+
+form#join {
+    background: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0.3em 1em;
+    top: 3.3em;
+    padding-top: 0.8em;
+    z-index: 1;
+    display: none;
+}
+
+form#join input[type="text"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1em;
+    padding: 0.3em 1em;
+    width: 65%;
+    width: calc(100% - 5em);
+}
+
+form#join input[type="submit"] {
+    font-size: 1em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.3em 1em;
+    border: 1px solid #999;
+    background-color: #BBB;
+    cursor: pointer;
+    width: 5em;
+}
+
+section#chatList {
+    background-color: white;
+    border: 1px solid #999;
+    position: absolute;
+    left: 0;
+    top: 3.3em;
+    bottom: 0;
+    width: 15em;
+    z-index: 0;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+@media screen and (max-width: 600px) {
+
+    section#chatList {
+        -webkit-transform: translate(-16em, 0);
+        -moz-transform: translate(-16em, 0);
+        -ms-transform: translate(-16em, 0);
+        -o-transform: translate(-16em, 0);
+        transform: translate(-16em, 0);
+    }
+
+    section#chatList.show {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+}
+
+section#chatList h2 {
+    background-color: #444;
+    color: white;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0.8em 0.5em 0.3em 0.5em;
+}
+
+section#chatList ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: auto;
+    position: absolute;
+    left: 0%;
+    right: 0;
+    top: 1.8em;
+    bottom: 0;
+}
+
+section#chatList li {
+    padding: 3em 1em;
+}
+
+section#chatList li:nth-child(odd) {
+    background-color: #EFEFEF;
+}
+
+section#chatList ul img {
+    width: 5em;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 2px 2px 3px #999;
+    -moz-box-shadow: 2px 2px 3px #999;
+    box-shadow: 2px 2px 3px #999;
+    float: right;
+    margin-top: -1.5em;
+}

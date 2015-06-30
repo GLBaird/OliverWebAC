@@ -1,0 +1,42 @@
+
+
+// conditional
+
+if (answer == 2) {
+	// code
+} else {
+	// code
+}
+
+
+
+if (answer == 2) {
+	// code
+} else if(answer == 20) {
+	// code
+} else {
+	// code catch all
+}
+
+
+// Ternary
+
+TEST ? TRUE : FALSE
+
+answer == 20 ? "Correct" : "Wrong"
+
+
+
+switch (answer) {
+
+	case 20:
+		// code
+		break;
+	case 10:
+		// code
+		break;
+	default:
+		// catch all
+
+}
+

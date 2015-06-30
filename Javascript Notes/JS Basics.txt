@@ -1,0 +1,21 @@
+
+var myData = 52;
+
+string
+number		NaN   Infinity
+boolean
+object Arrays NULL
+function
+undefined
+
+number + string = string
+
+"Leon" + " " + "Baird"   concatinate
+"Leon Baird"
+
+42 + "1" = "421"
+
+parseInt()
+parseFloat()
+isNan()
+isFinite()

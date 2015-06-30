@@ -1,0 +1,16 @@
+
+var info = "Hi there";
+
+function sayHello() {
+	// code
+	var myName = "Leon";
+	var info = "Something else";
+}
+
+
+sayHello()
+
+
+function addValues(valA, valB) {
+	return valA + valB;
+}

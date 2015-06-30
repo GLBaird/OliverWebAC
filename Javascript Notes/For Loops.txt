@@ -1,0 +1,32 @@
+
+
+for (init; test; result) {
+
+}
+
+
+for (var i=0; i < array.length; i++) {
+	array[i]
+}
+
+
+for (var i=0; i<party.length; i++) {
+	if (party[i] == "Marge") {
+		continue;
+	}
+	console.log(party[i]+" you are invited")
+}
+
+for (var i in party) {
+	console.log(party[i]+" you are invited")
+}
+
+for (var prop in data) {
+	console.log(prop+": "+data[prop]);
+}
+
+
+continue;
+break;
+
+
