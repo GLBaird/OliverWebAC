@@ -91,6 +91,8 @@ socketServer.on("request", function(request) {
         }
     });
 
+
+
     socket.on("close", function() {
         var index = clients.indexOf(socket);
         clients.splice(index, 1);
