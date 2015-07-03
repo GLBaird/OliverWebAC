@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Images</title>
+
+    <style>
+        section {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20em;
+            height: 20em;
+            background-color: rgba(0,0,0, 0.5);
+            color: white;
+            padding: 1em;
+            margin-left: -11em;
+            margin-top: -11em;
+            -webkit-transition: all 1s;
+        }
+
+        div[role="img"] {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 8em;
+            margin: 1em 0;
+            border: 1px solid white;
+        }
+
+        figure { margin: 0; }
+
+        section#one div[role="img"] {
+            background-image: url(images/one.jpg);
+        }
+
+        section#two div[role="img"] {
+            background-image: url(images/two.jpg);
+        }
+
+        section#three div[role="img"] {
+            background-image: url(images/three.jpg);
+        }
+
+        div#camera {
+            -webkit-perspective: 100em;
+            -webkit-perspective-origin: center;
+        }
+
+        section#one {
+            -webkit-transform: translate3d(-20em, 0, -20em) rotateY(70deg);
+            margin-top: 25vh;
+        }
+
+        section#two {
+            -webkit-transform: translate3d(-17em, 0, -20em) rotateY(70deg);
+            margin-top: 25vh;
+        }
+
+        section#three {
+            -webkit-transform: translate3d(-14em, 0, -20em) rotateY(70deg);
+            margin-top: 25vh;
+        }
+
+        section.show {
+            -webkit-transform: translate3d(0, 0, 1em) !important;
+            margin-top: 30vh !important;
+        }
+
+        section#choices {
+            left: 80%;
+        }
+
+    </style>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+    <div id="camera">
+        <section id="one">
+            <h2>Gateshead</h2>
+            <p>lkds flksdm fklsmd fksmd flksdm fkmds fkmdkf mlksfdlskdf
+            sdf klsmd flksmd fkmsd fkms dflkm sdf</p>
+            <figure>
+                <div role="img" aria-label="A demolished building"></div>
+                <figcaption>Trinity Carpark, Gateshead</figcaption>
+            </figure>
+        </section>
+
+        <section id="two">
+            <h2>Birmingham</h2>
+            <p>lkds flksdm fklsmd fksmd flksdm fkmds fkmdkf mlksfdlskdf
+                sdf klsmd flksmd fkmsd fkms dflkm sdf</p>
+            <figure>
+                <div role="img" aria-label="A demolished building"></div>
+                <figcaption>Central Library, Birmingham</figcaption>
+            </figure>
+        </section>
+
+        <section id="three">
+            <h2>London</h2>
+            <p>lkds flksdm fklsmd fksmd flksdm fkmds fkmdkf mlksfdlskdf
+                sdf klsmd flksmd fkmsd fkms dflkm sdf</p>
+            <figure>
+                <div role="img" aria-label="A demolished building"></div>
+                <figcaption>Mondial House, London</figcaption>
+            </figure>
+        </section>
+    </div>
+
+    <section id="choices">
+        <p>Please choose panel:</p>
+        <ul>
+            <li><a href="#" id="link1">Gateshead</a></li>
+            <li><a href="#" id="link2">Birmingham</a></li>
+            <li><a href="#" id="link3">London</a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+
+        $("section#choices a").click(function(e) {
+            e.preventDefault();
+            $("section").removeClass("show");
+            switch (this.id) {
+                case "link1":
+                    $("section#one").addClass("show");
+                    break;
+                case "link2":
+                    $("section#two").addClass("show");
+                    break;
+                case "link3":
+                    $("section#three").addClass("show");
+                    break;
+            }
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Cube</title>
+
+    <style>
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotateY(0deg);
+            }
+            100% {
+                -webkit-transform: rotateY(360deg);
+            }
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            background: #7abcff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #7abcff 0%, #60abf8 44%, #077aed 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#077aed)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#077aed 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#077aed 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#077aed 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #7abcff 0%,#60abf8 44%,#077aed 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#077aed',GradientType=0 ); /* IE6-9 */
+            margin: 0;
+            padding: 0;
+        }
+        
+        div.face {
+            background-color: #66F;
+            border: 1px solid white;
+            padding: 1em;
+            width: 10em;
+            height: 10em;
+            border-radius: 20px;
+            opacity: 0.9;
+            position: absolute;
+            left: 50%;
+            top: 20em;
+            margin-left: -5em;
+            -webkit-transform-origin: top left;
+        }
+
+        div#camera {
+            -webkit-perspective: 3000px;
+            -webkit-perspective-origin: 50% 50%;
+        }
+
+        div#face1 {
+            -webkit-transform:  translate3d(0, 0, 0) rotateY(0deg);
+        }
+
+        div#face2 {
+            -webkit-transform:  translate3d(12em, 0, 0) rotateY(90deg);
+        }
+
+        div#face3 {
+            -webkit-transform:  translate3d(12em, 0, -12em) rotateY(180deg);
+        }
+
+        div#face4 {
+            -webkit-transform:  translate3d(0, 0, -12em) rotateY(-90deg);
+        }
+
+        div#cube {
+            -webkit-animation: spin 5s linear infinite;
+            -webkit-transform-style: preserve-3d;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="camera">
+
+        <div id="cube">
+
+            <div id="face1" class="face">
+                <h2>Face 1</h2>
+                <p>This is the face of the cube</p>
+            </div>
+
+            <div id="face2" class="face">
+                <h2>Face 2</h2>
+                <p>Blah Blah Blah lsjdfn kjdsnf gjksn fjk ndsfjgk</p>
+            </div>
+
+            <div id="face3" class="face">
+                <h2>Face 3</h2>
+                <p>sadflasn dfjkn ajskdfn jas dnfjkna sdjkf nsajdf
+                asdlfka sdlkfm aklsdfm klsam dflkma sdflk masdkfls</p>
+            </div>
+
+            <div id="face4" class="face">
+                <h2>Face 4</h2>
+                <p>Click this: <button onclick="alert('Ouch')">Click Me</button></p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

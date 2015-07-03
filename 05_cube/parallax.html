@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax Scrolling</title>
+    <style>
+
+        * {
+            margin: 0;
+        }
+
+        body {
+            font-family: HelveticaNeue-Light, Helvetica, Arial, sans-serif;
+            font-size: larger;
+            color: #444;
+        }
+
+        h1, p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+        }
+
+        .parallax_container {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-perspective: 2px;
+        }
+
+        .parallax_layer {
+            position: absolute;
+            top: 0;
+            bottom:0;
+            right: 0;
+            left: 0;
+            padding: 100vh 0;
+        }
+
+        .front {
+            -webkit-transform: translateZ(0);
+        }
+
+        .middle {
+            -webkit-transform: translateZ(-1px);
+        }
+
+        .back {
+            -webkit-transform: translateZ(-2px);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="parallax_container">
+
+        <div class="parallax_layer front">
+            <h1>Welcome to Parallax</h1>
+        </div>
+
+        <div class="parallax_layer middle">
+            <p>This is the middle of the world</p>
+        </div>
+
+        <div class="parallax_layer back">
+            <p>Hello from the back of the world!!!</p>
+        </div>
+
+    </div>
+</body>
+</html>

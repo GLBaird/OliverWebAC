@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+
+    <h1>Form example</h1>
+
+    <p>Fill in this form</p>
+
+    <form action="process-form.php" method="post" enctype="multipart/form-data">
+
+        <label>Surname:
+        <input type="text" name="surname" autocomplete="off" spellcheck="false" required></label>
+        <br>
+        <label>Forename:
+            <input type="text" name="forename" autocomplete="off" spellcheck="false"></label>
+        <br>
+        <label>Are your bald
+        <input type="checkbox" name="bald" checked></label>
+        <br>
+        What is your title?
+        <label><input type="radio" name="title" value="mr" checked> Mr</label>
+        <label><input type="radio" name="title" value="mrs"> Mrs</label>
+        <label><input type="radio" name="title" value="miss"> Miss</label>
+        <label><input type="radio" name="title" value="ms"> Ms</label>
+        <label><input type="radio" name="title" value="prof"> Professor</label>
+        <label><input type="radio" name="title" value="dr"> Dr</label>
+        <br>
+
+        <label for="hobbies"> please choose your favourite hobby: </label>
+        <select name="hobbies">
+            <option value="pies">Pies</option>
+            <option value="evil">Evil</option>
+            <option value="bald">Being bald</option>
+            <option value="exploding">Exploding</option>
+        </select>
+
+        <br>
+        <label for="story">Please enter your life story</label><br>
+        <textarea name="story"></textarea>
+
+        <br>
+        <label>Upload CV:
+        <input type="file" name="cv"></label>
+        <br>
+        Funny Stuff:<br>
+        <input type="color" name="Colour"><br>
+        <input type="date" name="date"><br>
+        <input type="email" name="email"><br>
+        <input type="reset" value="Clear Form">
+        <input type="submit" value="Send Form">
+
+    </form>
+
+</body>
+</html>

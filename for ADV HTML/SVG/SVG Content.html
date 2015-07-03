@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to SVG Graphics</title>
+        
+        <style type="text/css">
+            @-webkit-keyframes fadeIn {
+                0%      { opacity: 0;  }
+                100%    { opacity: 1;  }
+            }
+            
+            @-webkit-keyframes spin {
+                0%      { -webkit-transform: rotate(0deg); }
+                100%    { -webkit-transform: rotate(360deg); }
+            }
+
+            
+            #rect {
+                -webkit-animation: fadeIn 3s;
+            }
+            
+            #circle {
+                -webkit-animation: spin 8s;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>SVG Content</h1>
+        <p>The following is an SVG image, and is therefore part of the browser DOM.</p>
+        
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+           <rect id="rect" x="49.5" y="25.5" fill="#42A200" stroke="#000000" stroke-miterlimit="10" width="206" height="115"/>
+           <circle id="circle" fill="#0800B0" stroke="#000000" stroke-miterlimit="10" cx="152.361" cy="214.444" r="62.445"/>
+        </svg>
+        
+    </body>
+</html>
